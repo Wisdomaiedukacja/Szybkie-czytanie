@@ -30,7 +30,18 @@
 <body>
     <div id="root"></div>
 <script type="module">
-  document.getElementById('root').textContent = "DZIAŁA 🙂 (GitHub Pages)";
+  import React from "react";
+  import { createRoot } from "react-dom/client";
+
+  function App() {
+    return React.createElement(
+      "div",
+      { style: { padding: "20px", fontSize: "20px" } },
+      "Hej! React działa na GitHub Pages ✅"
+    );
+  }
+
+  createRoot(document.getElementById("root")).render(React.createElement(App));
 </script>
 </body>
 </html>
